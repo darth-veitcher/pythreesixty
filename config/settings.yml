@@ -1,3 +1,4 @@
+root_url: 'https://bim360field.autodesk.com/'  # root of API
 DEBUG: True
 
 PACKAGE_NAME: 'pythreesixty'
