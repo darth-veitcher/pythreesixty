@@ -1,0 +1,5 @@
+site_name: PyThreeSixty
+pages:
+- Home: index.md
+#- About: about.md
+- Coverage: coverage.md
