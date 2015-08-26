@@ -13,7 +13,7 @@ Last updated: 2015.06.14
     + POST /api/project
     + POST /api/templates
     + POST /api/areas
-    + POST /api/companies
+    + <s>POST /api/companies</s> deprecated See GET /fieldapi/companies/v1
     + POST /api/contacts
     + POST /api/spec_refs
     + POST /api/priorities
@@ -85,8 +85,8 @@ Last updated: 2015.06.14
     + GET /fieldapi/checklists/v1
     + GET /fieldapi/checklists/v1/:id
 + fieldapi/companies/v1/companies_api
-    + GET /fieldapi/companies/v1
-    + GET /fieldapi/companies/v1/:id
+    + <s>GET /fieldapi/companies/v1</s>
+    + <s>GET /fieldapi/companies/v1/:id</s>
     + POST /fieldapi/companies/v1
     + PUT /fieldapi/companies/v1/:id
     + DELETE /fieldapi/companies/v1/:id

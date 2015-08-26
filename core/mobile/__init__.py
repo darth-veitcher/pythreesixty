@@ -1,3 +1,4 @@
+__author__ = 'James Veitch'
 import requests
 from ..helpers import get_token, _url
 
