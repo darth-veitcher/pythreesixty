@@ -10,7 +10,18 @@ from pprint import pprint
 
 import pythreesixty.core.mobile as mobile
 
-db = UnQLite()  # Creates an in-memory database.
+# Store locally to check size
+import os
+this_file = os.path.abspath(__file__)
+this_dir = os.path.dirname(this_file)
+
+# Time it too
+import arrow
+start = arrow.utcnow()
+print("Started at {now}".format(
+    now=start.to('Europe/London').format('YYYY-MM-DD HH:mm:ss')))
+
+db = UnQLite(os.path.join(this_dir, 'unqlite.db'))  # Creates an in-memory database if blank.
 issues = db.collection('issues')
 issues.create()  # Create the collection if it does not exist.
 
@@ -32,13 +43,11 @@ for p in projects.json():
     print("Local cache contains {0} items.".format(db.__len__()))
     print("JSON collection contains {0} issues.".format(len(issues.all())))
     pprint(issues.fetch(issues.last_record_id()))
+    print("Started {}".format(start.humanize()))
 
-
-
-
-
-
-
-
-
-
+print("Started {}".format(start.humanize()))
+finish = arrow.utcnow()
+print("Started at {now}".format(
+    now=start.to('Europe/London').format('YYYY-MM-DD HH:mm:ss')))
+print("Finished at {now}".format(
+    now=finish.to('Europe/London').format('YYYY-MM-DD HH:mm:ss')))

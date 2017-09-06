@@ -1,5 +1,5 @@
 cffi==1.1.2
-cryptography==0.9.3
+cryptography
 enum34==1.0.4
 idna==2.0
 ipaddress==1.0.14

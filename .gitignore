@@ -59,5 +59,6 @@ target/
 # PyCharm
 .idea/
 
-# Local settings
+# Local settings and db files
 config/settings.local.yml
+examples/unqlite*
